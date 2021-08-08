@@ -2,7 +2,7 @@
 
 Scripts to configure a clean manjaro gnome installation to my personal needs
 
-# Usage
+## Usage
 
 - Do a clean manjaro install, using the user "test" for installation
 - First run the script 01_user_creation.sh (or its commands)
