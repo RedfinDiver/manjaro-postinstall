@@ -1,0 +1,10 @@
+[Unit]
+Description=Automount markus home folder
+ConditionPathExists=/NAS/docker
+
+[Automount]
+Where=/NAS/docker
+TimeoutIdleSec=30
+
+[Install]
+WantedBy=multi-user.target

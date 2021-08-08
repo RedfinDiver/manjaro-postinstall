@@ -1,0 +1,10 @@
+[Unit]
+Description=Automount markus home folder
+ConditionPathExists=/NAS/ebooks
+
+[Automount]
+Where=/NAS/ebooks
+TimeoutIdleSec=30
+
+[Install]
+WantedBy=multi-user.target

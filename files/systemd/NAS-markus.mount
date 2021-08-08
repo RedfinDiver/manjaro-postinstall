@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount NAS home folder
+
+[Mount]
+What=192.168.178.20:/volume1/homes/markus
+Where=/NAS/markus
+Type=nfs
+Options=_netdev,auto
+
+[Install]
+WantedBy=remote-fs.target
+WantedBy=multi-user.target

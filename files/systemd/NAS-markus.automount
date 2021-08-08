@@ -1,0 +1,10 @@
+[Unit]
+Description=Automount markus home folder
+ConditionPathExists=/NAS/markus
+
+[Automount]
+Where=/NAS/markus
+TimeoutIdleSec=30
+
+[Install]
+WantedBy=multi-user.target
