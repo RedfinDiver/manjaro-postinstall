@@ -59,8 +59,8 @@ cp ~/Projekte/manjaro-postinstall/files/fonts/* ~/.local/share/fonts/
 fc-cache -f -v
 
 # user picture
-cp ~/Projekte/manjaro-postinstall/files/gnome/markus.jpg ~/.face
-# sudo cp ~/Projekte/manjaro-postinstall/files/gnome/account /var/lib/AccountsService/users/markus
+sudo cp ~/Projekte/manjaro-postinstall/files/gnome/markus.jpg /var/lib/AccountsService/icons/markus
+sudo cp ~/Projekte/manjaro-postinstall/files/gnome/account /var/lib/AccountsService/users/markus
 
 # gsettings, dconf watch / is your friend!
 
