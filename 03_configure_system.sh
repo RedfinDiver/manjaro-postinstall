@@ -58,6 +58,11 @@ mkdir ~/.local/share/fonts
 cp ~/Projekte/manjaro-postinstall/files/fonts/* ~/.local/share/fonts/
 fc-cache -f -v
 
+# user picture
+mkdir ~/.face
+cp ~/Projekte/manjaro-postinstall/files/gnome/markus.jpg ~/.face/markus
+sudo cp ~/Projekte/manjaro-postinstall/files/gnome/account /var/lib/AccountsService/users/markus
+
 # gsettings, dconf watch / is your friend!
 
 # keybindings
