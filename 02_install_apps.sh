@@ -38,4 +38,4 @@ visual-studio-code-bin --no-confirm
 
 # oh-my-fish install
 curl -L https://get.oh-my.fish | fish
-fish omf install bobthefish
+/usr/bin/fish omf install bobthefish
