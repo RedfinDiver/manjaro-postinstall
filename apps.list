@@ -1,0 +1,14 @@
+# List auf apps to install
+# Make sure there is a blank line at the end!
+
+# Manjaro Repos
+fish
+
+# Flatpaks
+us.zoom.Zoom                    flatpak
+
+# AUR
+gimp-plugin-saveforweb          aur
+
+# pip
+pipenv                          pip

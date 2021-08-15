@@ -6,35 +6,58 @@
 
 sudo pacman -Syu --noconfirm
 
-# Official repository installs
-sudo pacman -S \
-firefox \
-chromium \
-inkscape \
-gimp gimp-help-de \
-keepassxc \
-bitwarden \
-handbrake \
-fish \
-libreoffice-still libreoffice-still-de \
-hplip cups \
-jre11-openjdk-headless jre11-openjdk jdk11-openjdk openjdk11-src \
-ant \
-docker docker-compose python-pip \
-synology-drive-client \
-gtk-engine-murrine gtk-engines sassc optipng --noconfirm --needed
+# install function for all packages
+apps::install() {
+    # read the apps list file
+    while IFS= read -r line; do
+    if [[ "${line}" =~ ^# || -z "${line}" ]]
+    then
+        continue;
+    fi
 
-# pipenv install
-yes | sudo pip install pipenv
+    local app_data=(${line})
+    local app_name="${app_data[0]}"
+    
+    if [ -z "${app_data[1]}" ]
+    then
+        app_src="manjaro"
+    else
+        app_src="${app_data[1]}"
+    fi
 
-# Flatpak installs
-sudo pacman -S flatpak --noconfirm
-flatpak install flathub us.zoom.Zoom --noninteractive
+    apps::install_helper "${app_name}" "${app_src}"
 
-# AUR installs
-pamac build \
-gimp-plugin-saveforweb \
-visual-studio-code-bin --no-confirm
+    done < "./apps.list"
+}
 
-# oh-my-fish install
-curl -L https://get.oh-my.fish | fish
+# helper function
+apps::install_helper() {
+    local app="$1"
+    local src="$2"
+
+    if [ "${src}" = "manjaro" ]
+    then
+        std::info "Installing '${app}' from MANJARO REPOSITORIES"
+        printf 'pacman -S %s --noconfirm\n' "${app}"
+    fi
+    
+    if [ "${src}" = "aur" ]
+    then
+        std::info "Installing '${app}' from AUR"
+        printf 'pamac build %s --noconfirm\n' "${app}"
+    fi
+
+    if [ "${src}" = "flatpak" ]
+    then
+        std::info "Installing '${app}' as FLATPAK"
+        printf 'flatpack install %s --noconfirm\n' "${app}"
+    fi
+
+    if [ "${src}" = "pip" ]
+    then
+        std::info "Installing '${app}' with pip"
+        printf 'pip install %s\n' "${app}"
+    fi
+}
+
+apps::install

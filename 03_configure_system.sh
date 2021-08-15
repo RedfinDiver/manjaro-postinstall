@@ -47,6 +47,7 @@ sudo systemctl enable cups
 sudo cp -f ./files/system/hosts /etc/hosts
 
 # fish and oh-my-fish configuration
+curl -L https://get.oh-my.fish | fish
 sudo chsh -s /usr/bin/fish markus
 rm -f ~/.config/fish/config.fish
 ln -s ~/Projekte/manjaro-postinstall/files/fish/config.fish /home/markus/.config/fish/config.fish
