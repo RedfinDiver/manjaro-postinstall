@@ -24,3 +24,11 @@ end
 function tkdclub # shorthand to go into project
     cd /home/markus/Projekte/tkdclub
 end
+
+# Gtk-theme shorthands
+
+function mojave
+    cd ~/Projekte/Mojave-gtk-theme
+    git pull
+    sudo ~/Projekte/McMojave-gtk-theme/install.sh -c dark -o solid -i manjaro -g
+end

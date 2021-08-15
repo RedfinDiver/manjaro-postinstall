@@ -13,6 +13,7 @@ chromium \
 inkscape \
 gimp gimp-help-de \
 keepassxc \
+bitwarden \
 handbrake \
 fish \
 libreoffice-still libreoffice-still-de \
@@ -33,7 +34,6 @@ flatpak install flathub us.zoom.Zoom --noninteractive
 # AUR installs
 pamac build \
 gimp-plugin-saveforweb \
-bitwarden-bin \
 visual-studio-code-bin --no-confirm
 
 # oh-my-fish install
