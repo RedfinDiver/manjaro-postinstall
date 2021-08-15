@@ -37,14 +37,12 @@ apps::install_helper() {
 
     if [ "${src}" = "manjaro" ]
     then
-        std::info "Installing '${app}' from MANJARO REPOSITORIES"
-        printf 'pacman -S %s --noconfirm\n' "${app}"
+        sudo pacman -S "${app}" --noconfirm --needed
     fi
     
     if [ "${src}" = "aur" ]
     then
-        std::info "Installing '${app}' from AUR"
-        printf 'pamac build %s --noconfirm\n' "${app}"
+        pamac build "${app}" --noconfirm
     fi
 
     if [ "${src}" = "flatpak" ]
