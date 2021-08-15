@@ -47,14 +47,12 @@ apps::install_helper() {
 
     if [ "${src}" = "flatpak" ]
     then
-        std::info "Installing '${app}' as FLATPAK"
-        printf 'flatpack install %s --noconfirm\n' "${app}"
+        flatpack install "${app}"  --noninteractive
     fi
 
     if [ "${src}" = "pip" ]
     then
-        std::info "Installing '${app}' with pip"
-        printf 'pip install %s\n' "${app}"
+        pip install "${app}" 
     fi
 }
 
