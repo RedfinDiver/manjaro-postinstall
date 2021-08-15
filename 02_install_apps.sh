@@ -42,17 +42,17 @@ apps::install_helper() {
     
     if [ "${src}" = "aur" ]
     then
-        pamac build "${app}" --noconfirm
+        sudo pamac build "${app}" --no-confirm
     fi
 
     if [ "${src}" = "flatpak" ]
     then
-        flatpack install "${app}"  --noninteractive
+        flatpak install "${app}"  --noninteractive
     fi
 
     if [ "${src}" = "pip" ]
     then
-        pip install "${app}" 
+        sudo pip install "${app}" 
     fi
 }
 

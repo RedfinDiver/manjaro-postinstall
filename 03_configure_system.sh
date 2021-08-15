@@ -46,14 +46,6 @@ sudo systemctl enable cups
 # hosts file configuration
 sudo cp -f ./files/system/hosts /etc/hosts
 
-# fish and oh-my-fish configuration
-curl -L https://get.oh-my.fish | fish
-sudo chsh -s /usr/bin/fish markus
-rm -f ~/.config/fish/config.fish
-ln -s ~/Projekte/manjaro-postinstall/files/fish/config.fish /home/markus/.config/fish/config.fish
-rm -f ~/.config/fish/functions/fish_greeting.fish
-ln -s ~/Projekte/manjaro-postinstall/files/fish/fish_greeting.fish /home/markus/.config/fish/functions/fish_greeting.fish
-
 # install fonts
 mkdir ~/.local/share/fonts
 cp ~/Projekte/manjaro-postinstall/files/fonts/* ~/.local/share/fonts/
@@ -94,3 +86,11 @@ gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'fir
 
 # cleaning up
 sudo userdel -r test
+
+# fish and oh-my-fish configuration
+sudo chsh -s /usr/bin/fish markus
+rm -f ~/.config/fish/config.fish
+ln -s ~/Projekte/manjaro-postinstall/files/fish/config.fish /home/markus/.config/fish/config.fish
+rm -f ~/.config/fish/functions/fish_greeting.fish
+ln -s ~/Projekte/manjaro-postinstall/files/fish/fish_greeting.fish /home/markus/.config/fish/functions/fish_greeting.fish
+curl -L https://get.oh-my.fish | fish
