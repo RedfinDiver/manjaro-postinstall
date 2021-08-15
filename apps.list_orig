@@ -2,33 +2,34 @@
 # Make sure there is a blank line at the end!
 
 # Manjaro Repos
-firefox
-chromium
-inkscape
-bitwarden
-gimp
-gimp-help-de
-keepassxc
-handbrake
-fish
-libreoffice-still
-libreoffice-still-de
-hplip
-cups
-jre11-openjdk-headless
-jre11-openjdk
-jdk11-openjdk
-openjdk11-src
 ant
+bitwarden
+chromium
+cups
 docker
 docker-compose
-python-pip
-synology-drive-client
+firefox
+fish
+flatpak
+gimp
+gimp-help-de
 gtk-engine-murrine
 gtk-engines
-sassc
+handbrake
+hplip
+inkscape
+jdk11-openjdk
+jre11-openjdk
+jre11-openjdk-headless
+keepassxc
+libreoffice-still
+libreoffice-still-de
+openjdk11-src
 optipng
-flatpak
+python-pip
+sassc
+synology-drive-client
+timeshift
 
 # Flatpaks
 us.zoom.Zoom                    flatpak
