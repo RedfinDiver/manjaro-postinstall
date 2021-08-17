@@ -2,8 +2,8 @@
 # Make sure there is a blank line at the end!
 
 # Manjaro Repos
-ant
 bitwarden
+calibre
 chromium
 cups
 docker
@@ -30,6 +30,7 @@ python-pip
 sassc
 synology-drive-client
 timeshift
+ant
 
 # Flatpaks
 us.zoom.Zoom                    flatpak
