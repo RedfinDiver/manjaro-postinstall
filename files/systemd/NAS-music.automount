@@ -1,0 +1,10 @@
+[Unit]
+Description=Automount NAS music folder
+ConditionPathExists=/NAS/music
+
+[Automount]
+Where=/NAS/music
+TimeoutIdleSec=30
+
+[Install]
+WantedBy=multi-user.target

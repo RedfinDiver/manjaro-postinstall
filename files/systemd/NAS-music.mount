@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount NAS music folder
+
+[Mount]
+What=192.168.178.20:/volume1/music
+Where=/NAS/music
+Type=nfs
+Options=_netdev,auto
+
+[Install]
+WantedBy=remote-fs.target
+WantedBy=multi-user.target

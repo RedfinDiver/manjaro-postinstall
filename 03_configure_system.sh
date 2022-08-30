@@ -7,7 +7,7 @@
 sudo pacman -Syu --noconfirm
 
 # NAS mounts
-sudo mkdir -p /NAS/{markus,docker,ebooks,share}
+sudo mkdir -p /NAS/{markus,docker,ebooks,share,music}
 sudo cp ./files/systemd/* /etc/systemd/system/
 
 sudo systemctl start NetworkManager-wait-online.service
@@ -24,6 +24,9 @@ sudo systemctl enable NAS-ebooks.automount
 
 sudo systemctl start NAS-share.automount
 sudo systemctl enable NAS-share.automount
+
+sudo systemctl start NAS-music.automount
+sudo systemctl enable NAS-music.automount
 
 # git configuration
 git config --global user.name "Redfindiver"
