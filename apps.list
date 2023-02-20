@@ -31,13 +31,13 @@ sassc
 synology-drive-client
 timeshift
 ant
+code
 
 # Flatpaks
 us.zoom.Zoom                    flatpak
 
 # AUR
 gimp-plugin-saveforweb          aur
-visual-studio-code-bin          aur
 
 # pip
 pipenv                          pip
