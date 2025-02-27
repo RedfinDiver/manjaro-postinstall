@@ -1,17 +1,15 @@
-# Host addresses
+# Standard host addresses
 127.0.0.1  localhost
 ::1        localhost ip6-localhost ip6-loopback
 ff02::1    ip6-allnodes
 ff02::2    ip6-allrouters
-
-# for web-development with devilbox
-127.0.0.1  test.local
-127.0.0.1  entwicklung.local
-127.0.0.1  generatedata.local
-127.0.0.1  joomla4.local
+# This host address
+127.0.1.1  markus-linux
+# For web-development with lando
+127.0.0.1  tkdclub.local
 127.0.0.1  magcos.local
-127.0.0.1  magcos-demo.local
 127.0.0.1  ooetdv.local
-127.0.0.1  t4.local
 127.0.0.1  tgi.local
 127.0.0.1  uttendorf.local
+127.0.0.1  pma.local
+127.0.0.1  mailhog.local
