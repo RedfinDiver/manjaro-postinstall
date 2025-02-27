@@ -4,40 +4,28 @@
 # Manjaro Repos
 bitwarden
 calibre
-chromium
 cups
+hplip
 docker
 docker-compose
 firefox
-fish
+chromium
 flatpak
 gimp
 gimp-help-de
-gtk-engine-murrine
-gtk-engines
 handbrake
-hplip
 inkscape
-jdk11-openjdk
-jre11-openjdk
-jre11-openjdk-headless
 keepassxc
 libreoffice-still
 libreoffice-still-de
-openjdk11-src
-optipng
 python-pip
-sassc
-synology-drive-client
-timeshift
+python-pipenv
 ant
-code
 
 # Flatpaks
 us.zoom.Zoom                    flatpak
 
 # AUR
 gimp-plugin-saveforweb          aur
-
-# pip
-pipenv                          pip
+synology-drive-client
+visual-studio-code-bin
